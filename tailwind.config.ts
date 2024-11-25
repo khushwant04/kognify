@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config = {
   darkMode: ["class"],
@@ -69,11 +70,11 @@ const config = {
         },
         spotlight: {
           "0%": {
-            opacity: 0,
+            opacity: "0",
             transform: "translate(-72%, -62%) scale(0.5)",
           },
           "100%": {
-            opacity: 1,
+            opacity: "1",
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
@@ -84,8 +85,8 @@ const config = {
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
     },
-  },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  }, // Added missing closing brace
+  plugins: [tailwindcssAnimate],
+} satisfies Config;
 
-export default config
+export default config;
